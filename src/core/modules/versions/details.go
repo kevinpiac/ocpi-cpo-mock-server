@@ -71,11 +71,6 @@ func (uc *GetVersionDetailsUsecase) Execute(version VersionNumber, control *cont
 			URL:        "https://example.com/ocpi/2.0/credentials",
 		},
 		{
-			Identifier: ModuleIDCredentials,
-			Role:       EndpointRoleSender,
-			URL:        "https://example.com/ocpi/2.0/credentials",
-		},
-		{
 			Identifier: ModuleIDHubclientInfo,
 			Role:       EndpointRoleReceiver,
 			URL:        "https://example.com/ocpi/2.0/hubclientinfo",
