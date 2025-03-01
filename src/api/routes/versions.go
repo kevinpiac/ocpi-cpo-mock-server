@@ -12,3 +12,13 @@ func ListVersions(c *fiber.Ctx) error {
 	result := uc.Execute(c.Locals("control").(*controls.Control))
 	return c.JSON(result)
 }
+
+func GetVersionDetails(c *fiber.Ctx) error {
+	uc := versions.NewGetVersionDetailsUsecase()
+	version := c.Params("version")
+
+	versionNumber := versions.VersionNumber(version)
+
+	result := uc.Execute(versionNumber, c.Locals("control").(*controls.Control))
+	return c.JSON(result)
+}
