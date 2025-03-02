@@ -19,6 +19,7 @@ const (
 )
 
 func RegisterMiddlewares(app *fiber.App) {
+	app.Use(AuthMiddleware)
 	app.Use(ResponseControlMiddleware)
 }
 
